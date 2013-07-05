@@ -194,7 +194,7 @@ Ext.define("Chart.ux.HighStock", {
       //this.bindStore(this.store, true);
     }
 
-    Chart.ux.HighStock.superclass.afterRender.call(this);
+    this.callParent();
 
     this.bindComponent(true);
 
@@ -583,7 +583,7 @@ Ext.define("Chart.ux.HighStock", {
   },
   //private
   onResize : function() {
-    Chart.ux.HighStock.superclass.onResize.call(this);
+    this.callParent();
     this.update();
   },
   // private
@@ -624,7 +624,7 @@ Ext.define("Chart.ux.HighStock", {
     this.bindStore(null);
     this.bindComponent(null);
 
-    Chart.ux.HighStock.superclass.destroy.call(this);
+    this.callParent();
   }
 });
 
